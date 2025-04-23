@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
+#include "Enum/GameEnums.h"
 #include "CharacterMeshData.generated.h"
 
 /**
@@ -17,5 +18,5 @@ class UNREALSURVIVORS_API UCharacterMeshData : public UPrimaryDataAsset
 public:
 	// 캐릭터별 스켈레탈 메시.
 	UPROPERTY(EditAnywhere, Category = Character)
-	TMap<FName, TSoftObjectPtr<USkeletalMesh>> CharacterMeshs;
+	TMap<ECharacterType, TSoftObjectPtr<USkeletalMesh>> CharacterMeshs;
 };

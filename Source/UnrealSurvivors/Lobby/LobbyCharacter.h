@@ -23,9 +23,12 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-private:
-	UPROPERTY(meta = (BindWidget))
+public:
+	// 캐릭터 메시 변수.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Mesh")
 	TObjectPtr<class USkeletalMeshComponent> CharacterMesh;
+
+	// 데이터 에셋 변수.
 	UPROPERTY()
 	TObjectPtr<class UCharacterMeshData> CharacterMeshData;
 };
