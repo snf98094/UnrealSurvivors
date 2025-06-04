@@ -16,4 +16,15 @@ class UNREALSURVIVORS_API ALobbyGameMode : public AGameModeBase
 	
 public:
 	ALobbyGameMode();
+
+protected:
+	virtual void BeginPlay() override;
+
+	// 위젯 클래스
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI")
+	TSubclassOf<class UUserWidget> LobbyWidgetClass;
+
+	// 위젯 인스턴스
+	UPROPERTY()
+	class UUserWidget* LobbyWidget;
 };

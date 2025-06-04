@@ -31,4 +31,8 @@ public:
 	// 데이터 에셋 변수.
 	UPROPERTY()
 	TObjectPtr<class UCharacterMeshData> CharacterMeshData;
+
+	// UI 에셋 변수.
+	UPROPERTY()
+	TSubclassOf<UUserWidget> LobbyWidgetClass;
 };
